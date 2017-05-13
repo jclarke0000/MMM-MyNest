@@ -1,0 +1,236 @@
+/*
+
+  Akkurat is a licensed font.  As suvch it is not included with this module.
+  You don;t need it -- this module will fall back to Roboto, but if you want
+  the display to loook as Nest-like as possible, accquire the web-font Akkurat
+  and place in MagicMirror's /fonts/ folder, in a subfolder named "Akkurat".
+
+  Be sure to name your file akkurat-webfont.woff or akkurat-webfont.woff2
+  depending on what format you have.
+
+*/
+
+@font-face {
+  font-family: 'akkuratregular';
+  src: url('/fonts/Akkurat/akkurat-webfont.woff2') format('woff2'),
+       url('/fonts/Akkurat/akkurat-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MMM-MyNest .module-content {
+  font-family: "akkuratregular", "Roboto";
+}
+
+
+
+
+.MMM-MyNest .heating {
+  width: 100px;
+  height: 100px;
+  background: red;
+  background:radial-gradient(red, #ff4d4d);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  line-height:100px;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.MMM-MyNest .cooling {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  background:radial-gradient(blue, #33ccff);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  line-height:100px;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.MMM-MyNest .heatingHC {
+  width: 100px;
+  height: 100px;
+  background: red;
+  background:radial-gradient(red, #ff4d4d);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  line-height:100px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.MMM-MyNest .coolingHC {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  background:radial-gradient(blue, #33ccff);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  line-height:100px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.MMM-MyNest .off {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  background: black;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  line-height:100px;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.MMM-MyNest .heatingText {
+  font-size:medium;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 0;
+}
+
+.MMM-MyNest .coolingText {
+  font-size:medium;
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 0;
+}
+
+.MMM-MyNest .humidityText {
+  position:absolute;
+  font-size:large;
+  top: 60%;
+  width: 100%;
+}
+
+.MMM-MyNest .nameText {
+ font-size:medium;
+ text-align:center;
+ width:33%;
+}
+
+.MMM-MyNest .center {
+ text-align:center;
+}
+
+.MMM-MyNest .heatingCell {
+ background:red;
+ background:linear-gradient(to right, #990000 , red, #990000);
+}
+
+.MMM-MyNest .coolingCell {
+ background-color:blue;
+ background:linear-gradient(to right, #000099 , blue, #000099);
+}
+
+.MMM-MyNest .fanIcon {
+ height:15px;
+ width:15px;
+ position:absolute;
+ top: 72%;
+ right: 42%;
+}
+
+.MMM-MyNest .nameText {
+  width: 120px;
+  font-size: 18px;
+}
+
+.MMM-MyNest .humidityText {
+  top: 0;
+  display: block;
+  margin-top: 135px;
+  line-height: 1;
+}
+.MMM-MyNest .humidityText:after {
+  content: "Inside Humidity";
+  text-transform: uppercase;
+  color: #999;
+  font-size: 70%;
+  display:block;
+  line-height: 1.5;
+}
+
+@keyframes MMM-MyNest-spin { 
+  from { 
+    transform: rotate(0deg);
+  } to { 
+    transform: rotate(360deg); 
+  }
+}
+
+.MMM-MyNest .fanIcon {
+  filter: brightness(130%) saturate(0%);
+  animation-name: MMM-MyNest-spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  
+  top: 90px;
+  left: 53px;
+  right: initial;
+}
+
+.MMM-MyNest .heating .fanIcon,
+.MMM-MyNest .cooling .fanIcon {
+  filter: brightness(200%) saturate(0%);
+}
+
+.MMM-MyNest .off,
+.MMM-MyNest .heating,
+.MMM-MyNest .cooling {  
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  font-size: 45px;
+  line-height: 120px;
+  border: none;
+}
+
+.MMM-MyNest .off {
+  background: rgb(74, 83, 91);
+  background: -moz-linear-gradient(90deg, rgb(74, 83, 91) 0%, rgb(40, 48, 55) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(74, 83, 91) 0%, rgb(40, 48, 55) 100%);
+  background: -o-linear-gradient(90deg, rgb(74, 83, 91) 0%, rgb(40, 48, 55) 100%);
+  background: -ms-linear-gradient(90deg, rgb(74, 83, 91) 0%, rgb(40, 48, 55) 100%);
+  background: linear-gradient(180deg, rgb(74, 83, 91) 0%, rgb(40, 48, 55) 100%);
+}
+
+.MMM-MyNest .heating {
+  background: rgb(238, 127, 0);
+  background: -moz-linear-gradient(90deg, rgb(238, 127, 0) 0%, rgb(229, 89, 40) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(238, 127, 0) 0%, rgb(229, 89, 40) 100%);
+  background: -o-linear-gradient(90deg, rgb(238, 127, 0) 0%, rgb(229, 89, 40) 100%);
+  background: -ms-linear-gradient(90deg, rgb(238, 127, 0) 0%, rgb(229, 89, 40) 100%);
+  background: linear-gradient(180deg, rgb(238, 127, 0) 0%, rgb(229, 89, 40) 100%);
+  color: #FFF;
+}
+
+.MMM-MyNest .cooling {
+  background: rgb(5, 95, 255);
+  background: -moz-linear-gradient(90deg, rgb(5, 95, 255) 0%, rgb(1, 57, 255) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(5, 95, 255) 0%, rgb(1, 57, 255) 100%);
+  background: -o-linear-gradient(90deg, rgb(5, 95, 255) 0%, rgb(1, 57, 255) 100%);
+  background: -ms-linear-gradient(90deg, rgb(5, 95, 255) 0%, rgb(1, 57, 255) 100%);
+  background: linear-gradient(180deg, rgb(5, 95, 255) 0%, rgb(1, 57, 255) 100%);
+  color: #FFF;
+}
+
+.MMM-MyNest .blankDecimalSpacer {
+  opacity: 0;
+}
+

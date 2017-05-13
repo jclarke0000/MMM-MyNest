@@ -1,20 +1,16 @@
-# Module: MMM-Nest
-The `MMM-Nest` module is a <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a> addon.
-This module displays your <a href="https://www.nest.com">Nest's</a> data on your Mirror
+# Module: MMM-MyNest
+The `MMM-MyNest` module is a <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a> addon.
 
-<table width="100%" style="center">
-<tr>
-<td>Nest Display Mode (Only 1 Thermostat at a time)</td>
-<td>List Display Mode (Good for multiple Thermostats)</td>
-</tr>
-<tr>
-<td><img src="https://cloud.githubusercontent.com/assets/19363185/17138689/754130ba-530f-11e6-855a-d3c3142f36eb.png"</td>
-<td><img src="https://cloud.githubusercontent.com/assets/19363185/19297396/826b8214-9012-11e6-8287-313428602562.png"</td>
-</tr>
-</table>
+It is a fork of MMM-Nest by Luke Moch
+https://github.com/mochman/MMM-Nest
+
+This module displays your <a href="https://www.nest.com">Nest Thermostat</a> data on your Mirror
+
+**NOTE** I haven't tested this with multiple thermostats, or with list mode.  I only have one Nest in my home, and list mode kind of defeats the reason why I modified this module, which was to make the module look very close to what you see in the Nest app.
+
 
 ## Installing the module
-run `git clone https://github.com/mochman/MMM-Nest.git` from inside your `MagicMirror/modules` folder
+run `git clone https://github.com/jclarke0000/MMM-MyNest` from inside your `MagicMirror/modules` folder
 
 ## Getting the Nest Token
 Run getToken.sh.  This will walk you through getting a token to allow this module to get data from your Nest.  It requires you to set up a Nest Developer Account.
@@ -27,7 +23,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
 	{
-		module: 'MMM-Nest',
+		module: 'MMM-MyNest',
 		position: 'bottom_right',	// This can be any of the regions.
 									// Best results in one of the side regions like: top_left
 		config: {
@@ -48,7 +44,6 @@ Do not enter a `thermNum:` in your config.js.  The module will list your availab
 
 ## Configuration options
 The following properties can be configured:
-
 
 <table width="100%">
 	<!-- why, markdown... -->
@@ -81,12 +76,12 @@ The following properties can be configured:
 			</td>
 		</tr>
 		<tr>
-                        <td><code>displayType</code></td>
-                        <td>Choose how the data is displayed<br>
-                                <br><b>Possible values:</b> <code>"list"</code>, <code>"nest"</code>
-                                <br><b>Default value:</b> <code>"nest"</code>
-                        </td>
-                </tr>
+      <td><code>displayType</code></td>
+      <td>Choose how the data is displayed<br>
+        <br><b>Possible values:</b> <code>"list"</code>, <code>"nest"</code>
+        <br><b>Default value:</b> <code>"nest"</code>
+      </td>
+    </tr>
 		<tr>
 			<td><code>units</code></td>
 			<td>What units to use. Specified by config.js<br>
@@ -104,3 +99,9 @@ The following properties can be configured:
 		</tr>
 	</tbody>
 </table>
+
+## Using the Akkurat font
+
+The Nest Thermostst's display and the Nest app both use a font called Akkurat.  The module will use this font if available, but as it is a licensed font, it is not included in this repo.  It is optional -- the module will fall back to Roboto if Akkurat isn;t available -- but if you would like to use it, accquire the font on your own in webfopnt format, either woff or woff2.
+
+the font must be named `akkurat-webfont.woff` or `akkurat-webfont.woff2`, and it needs to be in a folder named `Akkurat` in MagicMirror's `fonts` folder.
