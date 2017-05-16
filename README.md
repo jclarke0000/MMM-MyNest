@@ -6,6 +6,10 @@ https://github.com/mochman/MMM-Nest
 
 This module displays your <a href="https://www.nest.com">Nest Thermostat</a> data on your Mirror
 
+![Screenshot 1](/../screenshots/mmm-mynest-scr1.png?raw=true "Screenshot 1")
+![Screenshot 2](/../screenshots/mmm-mynest-scr2.png?raw=true "Screenshot 2")
+
+
 **NOTE** I haven't tested this with multiple thermostats, or with list mode.  I only have one Nest in my home, and list mode kind of defeats the reason why I modified this module, which was to make the module look very close to what you see in the Nest app.
 
 
